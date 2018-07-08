@@ -28,3 +28,11 @@ menu = [
 for meal in menu:
     print(meal, "contains sausage" if "sausage" in meal else "contains bacon" if "bacon" in meal else "contains egg")
 
+print()
+
+items = set()
+for meal in menu:
+    for item in meal:
+        items.add(item)
+print(items)
+print()
