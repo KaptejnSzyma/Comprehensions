@@ -13,3 +13,6 @@ menu = [
 for meal in menu:
     if "spam" not in meal:
         print(meal)
+
+meals = [meal for meal in menu if "spam" not in meal]
+print(meals)
