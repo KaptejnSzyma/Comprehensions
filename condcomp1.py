@@ -18,9 +18,9 @@ for meal in menu:
         meals.append("a meal was skipped")
 print(meals)
 
-meals = [meal for meal in menu if "spam" not in meal]
+meals = [meal if "spam" not in meal else "a meal skipped" for meal in menu]
 print(meals)
 
 x = 12
-expression = "Twelve" if x==12 else "unknown"
+expression = "Twelve" if x == 12 else "unknown"
 print(expression)
