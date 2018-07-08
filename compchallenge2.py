@@ -11,3 +11,7 @@ exits = {0: {"Q": 0},
          3: {"W": 1, "Q": 0},
          4: {"N": 1, "W": 2, "Q": 0},
          5: {"W": 2, "S": 1, "Q": 0}}
+
+loc = 5
+forest = [locations[exit] for exit in exits if loc in exits[exit].values()]
+print(forest)
