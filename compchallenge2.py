@@ -15,3 +15,6 @@ exits = {0: {"Q": 0},
 loc = 5
 forest = [locations[exit] for exit in exits if loc in exits[exit].values()]
 print(forest)
+
+forest = [(exit, locations[exit]) for exit in exits if loc in exits[exit].values()]
+print(forest)
