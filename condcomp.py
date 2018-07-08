@@ -9,10 +9,12 @@ menu = [
     ["spam", "egg", "sausage", "spam"],
     ["chicken", "chips"]
 ]
- 
+
+meals = []
 for meal in menu:
     if "spam" not in meal:
-        print(meal)
+        meals.append(meal)
+print(meals)
 
 meals = [meal for meal in menu if "spam" not in meal]
 print(meals)
