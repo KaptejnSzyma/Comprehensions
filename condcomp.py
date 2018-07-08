@@ -20,3 +20,6 @@ print(meals)
 
 meals = [meal for meal in menu if "spam" not in meal and "chicken" not in meal]
 print(meals)
+
+fussy_meals = [meal for meal in menu if "spam" in meal or "eggs" in meal if not ("bacon" in meal and "sausage" in meal)]
+print(fussy_meals)
