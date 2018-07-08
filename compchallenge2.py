@@ -16,5 +16,7 @@ loc = 5
 forest = [locations[exit] for exit in exits if loc in exits[exit].values()]
 print(forest)
 
-forest = [(exit, locations[exit]) for exit in exits if loc in exits[exit].values()]
-print(forest)
+for loc in sorted(locations):
+    forest = [(exit, locations[exit]) for exit in exits if loc in exits[exit].values()]
+    print("Locations leading to {}".format(loc), end='\t')
+    print(forest)
