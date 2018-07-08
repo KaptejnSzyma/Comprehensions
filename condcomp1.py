@@ -36,3 +36,8 @@ for meal in menu:
         items.add(item)
 print(items)
 print()
+
+for meal in menu:
+    for item in items:
+        if item in meal:
+            print("{} contains {}".format(meal, item))
