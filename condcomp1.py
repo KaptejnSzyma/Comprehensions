@@ -10,17 +10,20 @@ menu = [
     ["chicken", "chips"]
 ]
 
-meals = []
+# meals = []
+# for meal in menu:
+#     if "spam" not in meal:
+#         meals.append(meal)
+#     else:
+#         meals.append("a meal was skipped")
+# print(meals)
+#
+# meals = [meal if "spam" not in meal else "a meal skipped" for meal in menu]
+# print(meals)
+#
+# x = 12
+# expression = "Twelve" if x == 12 else "unknown"
+# print(expression)
+
 for meal in menu:
-    if "spam" not in meal:
-        meals.append(meal)
-    else:
-        meals.append("a meal was skipped")
-print(meals)
-
-meals = [meal if "spam" not in meal else "a meal skipped" for meal in menu]
-print(meals)
-
-x = 12
-expression = "Twelve" if x == 12 else "unknown"
-print(expression)
+    print(meal, "contains chicken" if "chicken" in meal else "contains bacon" if "bacon" in meal else "contains egg")
