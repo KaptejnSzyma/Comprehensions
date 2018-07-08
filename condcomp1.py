@@ -26,4 +26,5 @@ menu = [
 # print(expression)
 
 for meal in menu:
-    print(meal, "contains chicken" if "chicken" in meal else "contains bacon" if "bacon" in meal else "contains egg")
+    print(meal, "contains sausage" if "sausage" in meal else "contains bacon" if "bacon" in meal else "contains egg")
+
