@@ -14,6 +14,8 @@ meals = []
 for meal in menu:
     if "spam" not in meal:
         meals.append(meal)
+    else:
+        meals.append("a meal was skipped")
 print(meals)
 
 meals = [meal for meal in menu if "spam" not in meal]
