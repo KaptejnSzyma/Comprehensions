@@ -22,6 +22,7 @@ for loc in sorted(locations):
     print("Locations leading to {}".format(loc), end="\t")
     print(exits_to_destination_1)
 
+print()
 
 print("List comprehension inside a for loop")
 print("====================================")
@@ -31,3 +32,9 @@ for loc in sorted(locations):
     print(exits_to_destination_2)
 
 print()
+
+print("nested comprehension")
+print("====================")
+exits_to_destination_3 = [[(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
+                          for loc in sorted(locations)]
+print(exits_to_destination_3)
