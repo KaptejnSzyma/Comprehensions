@@ -21,3 +21,13 @@ for loc in sorted(locations):
             exits_to_destination_1.append((xit, locations[xit]))
     print("Locations leading to {}".format(loc), end="\t")
     print(exits_to_destination_1)
+
+
+print("List comprehension inside a for loop")
+print("====================================")
+for loc in sorted(locations):
+    exits_to_destination_2 = [(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
+    print("Locations leading to {}".format(loc), end="\t")
+    print(exits_to_destination_2)
+
+print()
