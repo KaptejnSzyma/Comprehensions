@@ -12,3 +12,12 @@ exits = {0: {"Q": 0},
          4: {"N": 1, "W": 2, "Q": 0},
          5: {"W": 2, "S": 1, "Q": 0}}
 
+print("nested for loops")
+print("================")
+for loc in sorted(locations):
+    exits_to_destination_1 = []
+    for xit in exits:
+        if loc in exits[xit].values():
+            exits_to_destination_1.append((xit, locations[xit]))
+    print("Locations leading to {}".format(loc), end="\t")
+    print(exits_to_destination_1)
