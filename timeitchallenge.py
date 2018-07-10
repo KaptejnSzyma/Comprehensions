@@ -28,5 +28,8 @@ def factorial(n):
 
 
 if __name__ == '__main__':
-    print(timeit.repeat("x = fact(130)", setup="from __main__ import fact", number=10000))
-    print(timeit.repeat("x = factorial(130)", setup="from __main__ import factorial", number=10000))
+    list1 = timeit.repeat("x = fact(130)", setup="from __main__ import fact", number=10000)
+    list2 = timeit.repeat("x = factorial(130)", setup="from __main__ import factorial", number=10000)
+
+    print(sum(list1))
+    print(sum(list2))
