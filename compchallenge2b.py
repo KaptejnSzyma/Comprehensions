@@ -16,6 +16,7 @@ exits = {0: {"Q": 0},
 
 print("nested for loops")
 print("================")
+nested_loop = """\
 for loc in sorted(locations):
     exits_to_destination_1 = []
     for xit in exits:
@@ -23,23 +24,26 @@ for loc in sorted(locations):
             exits_to_destination_1.append((xit, locations[xit]))
     print("Locations leading to {}".format(loc), end="\t")
     print(exits_to_destination_1)
-
+"""
 print()
 
 print("List comprehension inside a for loop")
 print("====================================")
+loop_comp = """\
 for loc in sorted(locations):
     exits_to_destination_2 = [(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
     print("Locations leading to {}".format(loc), end="\t")
     print(exits_to_destination_2)
-
+"""
 print()
 
 print("nested comprehension")
 print("====================")
+nested_comp = """\
 exits_to_destination_3 = [[(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
                           for loc in sorted(locations)]
 
 for index, loc in enumerate(exits_to_destination_3):
     print("Locations leading to {}".format(index), end="\t")
     print(exits_to_destination_3)
+"""
