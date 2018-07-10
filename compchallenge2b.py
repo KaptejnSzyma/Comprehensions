@@ -56,6 +56,13 @@ def nested_comp():
     return exits_to_destination_3
 
 
+def nested_gen():
+    exits_to_destination_4 = ([(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
+                              for loc in sorted(locations))
+
+    return exits_to_destination_4
+
+
 print(nested_loop())
 print(loop_comp())
 print(nested_comp())
@@ -63,7 +70,9 @@ print(nested_comp())
 result_1 = timeit.timeit(nested_loop, setup, number=1000)
 result_2 = timeit.timeit(loop_comp, setup, number=1000)
 result_3 = timeit.timeit(nested_comp, setup, number=1000)
+result_4 = timeit.timeit(nested_gen, setup, number=1000)
 
 print("Nested loop:\t{}".format(result_1))
 print("List and comp:\t{}".format(result_2))
 print("Nested comp:\t{}".format(result_3))
+print("Nested gen:\t{}".format(result_4))
