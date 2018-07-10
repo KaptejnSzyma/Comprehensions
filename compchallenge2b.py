@@ -47,3 +47,6 @@ for index, loc in enumerate(exits_to_destination_3):
     print("Locations leading to {}".format(index), end="\t")
     print(exits_to_destination_3)
 """
+
+result_1 = timeit.timeit(nested_loop, globals=globals(), number=1000)
+print("Nested loop:\t{}".format(result_1))
