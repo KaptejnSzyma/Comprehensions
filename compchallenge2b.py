@@ -1,3 +1,5 @@
+import timeit
+
 locations = {0: "You are sitting in front of a computer learning Python",
              1: "You are standing at the end of a road before a small brick building",
              2: "You are at the top of a hill",
@@ -37,9 +39,7 @@ print("nested comprehension")
 print("====================")
 exits_to_destination_3 = [[(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
                           for loc in sorted(locations)]
-print(exits_to_destination_3)
 
-print()
 for index, loc in enumerate(exits_to_destination_3):
     print("Locations leading to {}".format(index), end="\t")
     print(exits_to_destination_3)
