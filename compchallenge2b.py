@@ -1,5 +1,5 @@
 import timeit
-
+setup = """\
 locations = {0: "You are sitting in front of a computer learning Python",
              1: "You are standing at the end of a road before a small brick building",
              2: "You are at the top of a hill",
@@ -13,7 +13,7 @@ exits = {0: {"Q": 0},
          3: {"W": 1, "Q": 0},
          4: {"N": 1, "W": 2, "Q": 0},
          5: {"W": 2, "S": 1, "Q": 0}}
-
+"""
 print("nested for loops")
 print("================")
 nested_loop = """\
@@ -48,5 +48,5 @@ for index, loc in enumerate(exits_to_destination_3):
     print(exits_to_destination_3)
 """
 
-result_1 = timeit.timeit(nested_loop, globals=globals(), number=1000)
+result_1 = timeit.timeit(nested_loop, setup, number=1000)
 print("Nested loop:\t{}".format(result_1))
