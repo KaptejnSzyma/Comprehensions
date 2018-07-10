@@ -38,6 +38,8 @@ def nested_loop():
             if loc in exits[xit].values():
                 exits_to_destination_1.append((xit, locations[xit]))
         result.append(exits_to_destination_1)
+    for x in result:
+        pass
     return result
 
 
@@ -46,6 +48,8 @@ def loop_comp():
     for loc in sorted(locations):
         exits_to_destination_2 = [(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
         result.append(exits_to_destination_2)
+    for x in result:
+        pass
     return result
 
 
@@ -53,6 +57,8 @@ def nested_comp():
     exits_to_destination_3 = [[(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
                               for loc in sorted(locations)]
 
+    for x in exits_to_destination_3:
+        pass
     return exits_to_destination_3
 
 
@@ -60,6 +66,8 @@ def nested_gen():
     exits_to_destination_4 = ([(xit, locations[xit]) for xit in exits if loc in exits[xit].values()]
                               for loc in sorted(locations))
 
+    for x in exits_to_destination_4:
+        pass
     return exits_to_destination_4
 
 
